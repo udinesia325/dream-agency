@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .nav-active{
+        position: relative;
+    }
+    .nav-active::after {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 3px;
+        background-color: #FDC021;
+        bottom: 0;
+        left: 0;
+    }
+    .fancy-border-radius {
+        border-radius: 68% 32% 69% 31% / 49% 52% 48% 51%   ;
+    }
+}

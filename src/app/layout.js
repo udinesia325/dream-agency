@@ -1,7 +1,10 @@
 import { Hind_Vadodara } from 'next/font/google'
 import './globals.css'
 
-const hind_vadodara = Hind_Vadodara({ subsets: ['latin'], weight: '400' })
+const hind_vadodara = Hind_Vadodara({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+})
 
 export const metadata = {
   title: 'Create Next App',
