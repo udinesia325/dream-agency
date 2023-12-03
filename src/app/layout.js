@@ -1,7 +1,7 @@
-import { Inter } from 'next/font/google'
+import { Hind_Vadodara } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const hind_vadodara = Hind_Vadodara({ subsets: ['latin'], weight: '400' })
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +11,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <title>Dream Agency</title>
+      <body className={hind_vadodara.className}>{children}</body>
     </html>
   )
 }
