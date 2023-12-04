@@ -58,18 +58,21 @@ const RecentWorkSlider = () => {
       >
         {RecentWorkData.map((data, index) => (
           <SwiperSlide key={index} virtualIndex={index} className="p-3">
-            <div className="mx-auto w-[90%]bg-white p-4 shadow-md rounded-lg">
+            <div className="mx-auto w-[90%] bg-white p-4 shadow-md rounded-lg">
               <Image
                 src={data.image}
                 width={350}
                 height={200}
                 style={{ backgroundColor: data.color }}
                 alt={data.title}
-                className="p-2 aspect-video rounded-md"
+                className="p-2 w-full aspect-video rounded-md"
               />
-              <h1 className="my-2 text-lg text-dark font-bold uppercase">
-                {data.title}
-              </h1>
+              <div className="flex justify-between items-center">
+                <h1 className="my-2 text-lg text-dark font-bold uppercase">
+                  {data.title}
+                </h1>
+                <button className='text-dark text-sm tracking-wide border-2 border-dark rounded-full py-[5px] px-2'>View Work</button>
+              </div>
             </div>
           </SwiperSlide>
         ))}
