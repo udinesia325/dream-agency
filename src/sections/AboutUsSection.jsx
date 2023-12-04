@@ -8,8 +8,8 @@ import OurRecentWorkSection from './OurRecentWorkSection'
 function AboutUsSection() {
   return (
     <>
-      {' '}
-      <div className="mt-32 flex flex-col flex-wrap sm:flex-row justify-between items-start relative">
+      <div className="h-32" id="about-us"></div>
+      <div className="flex flex-col flex-wrap sm:flex-row justify-between items-start relative">
         {/* image */}
         <div className="basis-1/2 min-w-[400px] min-h-[400px]  relative">
           <Image
@@ -55,7 +55,7 @@ function AboutUsSection() {
         </div>
 
         {/* decorator */}
-        <div className="bg-orange-light-2/50 w-full min-w-[600px] h-[500px] sm:h-[400px] rounded-tl-full absolute -z-[1]  top-64 -left-36"></div>
+        <div className="bg-orange-light-2/50 w-full min-w-[600px] h-[500px] sm:h-[400px] rounded-tl-full absolute -z-[1]  top-64 left-0 sm:-left-36"></div>
       </div>
       <OurRecentWorkSection />
     </>

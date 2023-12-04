@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { Playfair_Display } from 'next/font/google'
 import { HiMenuAlt1, HiX } from 'react-icons/hi'
 import { motion } from 'framer-motion'
+import { useRouter, usePathname } from 'next/navigation'
 
 const playfair_Display = Playfair_Display({
   weight: ['400', '700'],
@@ -14,13 +15,15 @@ const playfair_Display = Playfair_Display({
 function Navbar() {
   const [y, setY] = useState(0)
   const [show, setShow] = useState(0)
+  const [activeHash, setActiveHash] = useState('')
 
   useEffect(() => {
     window.addEventListener('scroll', (e) => {
       setY(window.scrollY)
     })
+    setActiveHash(window.location.hash)
   }, [])
-  console.log(show)
+
   return (
     <>
       <nav
@@ -31,16 +34,22 @@ function Navbar() {
         {/* only on desktop menu */}
         <ul className="hidden sm:flex gap-3 items-center mr-auto">
           {navItem.map((nav, index) => (
-            <li key={index}>
-              <Link
+            <motion.li
+              key={index}
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              transition={{ delay: eval('0.' + index) }}
+            >
+              <a
+                onClick={() => setActiveHash(nav.href)}
                 href={nav.href}
                 className={`text-dark text-sm ${
-                  index == 0 ? 'nav-active' : ''
+                  activeHash == nav.href ? 'nav-active font-semibold' : ''
                 }`}
               >
                 {nav.title}
-              </Link>
-            </li>
+              </a>
+            </motion.li>
           ))}
         </ul>
 
@@ -58,34 +67,44 @@ function Navbar() {
           className=" bg-[#fafafa] flex sm:hidden gap-3 justify-center items-center mr-auto p-5 rounded-lg shadow-lg fixed z-20 top-[80px] w-[90%] max-w-[500px]"
         >
           {navItem.map((nav, index) => (
-            <li key={index}>
-              <Link
+            <motion.li
+              key={index}
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              transition={{ delay: eval('0.' + index) }}
+            >
+              <a
+                onClick={() => setActiveHash(nav.href)}
                 href={nav.href}
                 className={`text-dark text-sm ${
-                  index == 0 ? 'nav-active' : ''
+                  activeHash == nav.href ? 'nav-active font-semibold' : ''
                 }`}
               >
                 {nav.title}
-              </Link>
-            </li>
+              </a>
+            </motion.li>
           ))}
         </motion.ul>
-        <h1
+        <motion.h1
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
           className={`${playfair_Display.className} mx-auto text-dark font-bold`}
         >
           Dream Agency
-        </h1>
+        </motion.h1>
 
         <ul className="flex items-center gap-4 ml-auto">
           {navSocial.map((nav, index) => (
             <motion.li
-              animate={{ opacity:1 }}
-              initial={{ opacity:0 }}
-              transition={{ delay: parseFloat('0.'+index.toFixed(1)) }}
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              transition={{ delay: eval('0.' + index) }}
               key={index}
               className="border-2 border-dark fancy-border-radius p-2"
             >
-              <Link href={nav.href}>{nav.icon}</Link>
+              <Link href={nav.href} target="_blank">
+                {nav.icon}
+              </Link>
             </motion.li>
           ))}
         </ul>

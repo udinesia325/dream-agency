@@ -10,7 +10,7 @@ const playfair_Display = Playfair_Display({
 
 function FooterSection() {
   return (
-    <div className="bg-black w-full rounded-tr-2xl sm:rounded-tr-full flex flex-col flex-wrap sm:flex-row justify-between gap-y-10 text-white mt-8 p-8">
+    <div id='contact-us' className="bg-black w-full rounded-tr-2xl sm:rounded-tr-full flex flex-col flex-wrap sm:flex-row justify-between gap-y-10 text-white mt-8 p-8">
       <div className="basis-1/2">
         <h1 className={`${playfair_Display.className} text-3xl`}>
           Dream Agency

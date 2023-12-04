@@ -7,31 +7,31 @@ const navItem = [
     href: '#',
   },
   {
-    title: 'About Us',
-    href: '#',
+    title: 'Services',
+    href: '#services',
   },
   {
-    title: 'Services',
-    href: '#',
+    title: 'About Us',
+    href: '#about-us',
   },
   {
     title: 'Contact Us',
-    href: '#',
+    href: '#contact-us',
   },
 ]
 
 export const navSocial = [
   {
     icon: <FaFacebookF className="text-dark" />,
-    href: '#',
+    href: 'https://www.facebook.com/',
   },
   {
     icon: <FaLinkedinIn className="text-dark" />,
-    href: '#',
+    href: 'https://www.linkedin.com/',
   },
   {
     icon: <FaInstagram className="text-dark" />,
-    href: '#',
+    href: 'https://www.instagram.com/',
   },
 ]
 export default navItem

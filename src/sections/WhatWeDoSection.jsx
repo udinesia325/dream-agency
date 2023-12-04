@@ -5,7 +5,9 @@ import dotted from "@/assets/images/dotted.png"
 
 function WhatWeDoSection() {
   return (
-    <div className='relative mt-28'>
+    <>
+    <div id='services' className='h-28'></div>
+    <div className='relative'>
       {/* decoration */}
       <div className="w-[90%] h-[400px] absolute z-[2] bg-blue-light rounded-tr-full"></div>
       <Image src={dotted} width={400} height={350} className='absolute z-[1] right-0 -bottom-20' alt='decoration' />
@@ -19,6 +21,7 @@ function WhatWeDoSection() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
