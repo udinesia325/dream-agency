@@ -18,4 +18,32 @@
     .fancy-border-radius {
         border-radius: 68% 32% 69% 31% / 49% 52% 48% 51%   ;
     }
+    .hero-heading{
+        position: relative;
+        z-index: 1;
+    }
+    .hero-heading::after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 5px;
+        left: 5px;
+        width: 200px;
+        height: 13px;
+        background-color: #FDC021;
+    }
+    .what-we-do-heading{
+        position: relative;
+        z-index: 1;
+    }
+    .what-we-do-heading::after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 5px;
+        right: 0;
+        width: 100px;
+        height: 8px;
+        background-color: #FDC021;
+    }
 }

@@ -3,12 +3,13 @@ import React from 'react'
 import hero_image from '@/assets/images/hero_image.png'
 import orange_hero_decor_2 from '@/assets/images/orange_hero_decor_2.svg'
 import orange_hero_decor from '@/assets/images/orange_hero_decor.svg'
+import dotted from '@/assets/images/dotted.png'
 
 function HeroSection() {
   return (
     <div className="flex flex-col sm:flex-row flex-wrap justify-between items-center mt-5 px-5">
       <div className="basis-1/2 max-w-[490px] flex flex-col gap-y-3 justify-start items-start">
-        <h1 className={`text-6xl font-extralight text-dark `}>
+        <h1 className={`text-6xl font-extralight text-dark hero-heading`}>
           <span className="font-bold">
             We Help You <br />
           </span>
@@ -36,9 +37,16 @@ function HeroSection() {
         <Image
           width={280}
           height={350}
+          src={dotted}
+          alt="hero image decoration"
+          className="absolute z-[2] left-[20%]"
+        />
+        <Image
+          width={280}
+          height={350}
           src={orange_hero_decor_2}
           alt="hero image decoration"
-          className="absolute z-[2] left-[30%] -top-10"
+          className="absolute z-[3] left-[30%] -top-10"
         />
 
         <Image
@@ -46,7 +54,7 @@ function HeroSection() {
           height={350}
           src={hero_image}
           alt="hero image"
-          className="relative z-[3] m-auto"
+          className="relative z-[4] m-auto"
         />
       </div>
     </div>
