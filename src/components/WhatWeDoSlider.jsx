@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
 import { WhatWeDoSliderData } from '@/data/slider'
 import Image from 'next/image'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import 'swiper/css'
 import 'swiper/css/virtual'
 
@@ -47,8 +47,8 @@ const WhatWeDoSlider = () => {
             slidesPerView: 2,
             spaceBetween: 30,
           },
-          // when window width is >= 640px
-          640: {
+          // when window width is >= 1000px
+          1092: {
             slidesPerView: 3,
             spaceBetween: 20,
           },

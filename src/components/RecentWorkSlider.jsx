@@ -5,7 +5,7 @@ import { Virtual } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
-import { RecentWorkData, WhatWeDoSliderData } from '@/data/slider'
+import { RecentWorkData } from '@/data/slider'
 import Image from 'next/image'
 import { useRef } from 'react'
 import 'swiper/css'

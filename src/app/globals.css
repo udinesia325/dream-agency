@@ -62,4 +62,25 @@
         height: 8px;
         background-color: #FDC021;
     }
+    .testimonial-heading {
+        position: relative;
+        z-index: 2;
+    }
+    .testimonial-heading::after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 5px;
+        right: 0;
+        width: 100px;
+        height: 8px;
+        background-color: #FDC021;
+    }
+
+    @media screen and (max-width:500px) {
+        .testimonial-heading::after{
+            right: 65px;
+            height: 5px;
+        }
+    }
 }
