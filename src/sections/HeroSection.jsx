@@ -30,7 +30,7 @@ function HeroSection() {
         height={350}
         src={orange_hero_decor}
         alt="hero image decoration"
-        className="absolute z-[1] right-0 top-0"
+        className="absolute -z-[1] right-0 top-0"
       />
       <div className="basis-1/2 min-w-[355px] relative flex">
         {/* decoration */}
