@@ -36,12 +36,28 @@
         position: relative;
         z-index: 1;
     }
-    .what-we-do-heading::after{
+    .what-we-do-heading::after,.about-heading::after{
         content: '';
         position: absolute;
         z-index: -1;
         bottom: 5px;
         right: 0;
+        width: 100px;
+        height: 8px;
+        background-color: #FDC021;
+    }
+
+    .about-heading,.recent-work-heading{
+        position: relative;
+        z-index: 2;
+    }
+
+    .recent-work-heading::after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 5px;
+        right: 60px;
         width: 100px;
         height: 8px;
         background-color: #FDC021;

@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <title>Dream Agency</title>
-      <body className={hind_vadodara.className}>{children}</body>
+      <body className={`${hind_vadodara.className} bg-[#fafafa]`}>{children}</body>
     </html>
   )
 }
