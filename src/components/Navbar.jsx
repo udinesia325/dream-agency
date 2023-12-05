@@ -57,8 +57,9 @@ function Navbar() {
           animate={{ rotate: show ? 90 : 0 }}
           onClick={() => setShow((prev) => !prev)}
           className="text-4xl p-1 sm:hidden"
+          aria-label='hamburger menu'
         >
-          {show ? <HiX /> : <HiMenuAlt1 />}
+          {show ? <HiX aria-label='close menu' /> : <HiMenuAlt1 aria-label='show menu' />}
         </motion.button>
         {/* only on mobile menu */}
         <motion.ul
@@ -101,7 +102,7 @@ function Navbar() {
               key={index}
               className="border-2 border-dark fancy-border-radius p-2"
             >
-              <Link href={nav.href} target="_blank">
+              <Link href={nav.href} target="_blank" aria-label={`Go to my ${nav.href} page`}>
                 {nav.icon}
               </Link>
             </motion.li>

@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React, { useEffect, useRef } from 'react'
-import hero_image from '@/assets/images/hero_image.png'
+import hero_image from '@/assets/images/hero_image.webp'
 import orange_hero_decor_2 from '@/assets/images/orange_hero_decor_2.svg'
 import orange_hero_decor from '@/assets/images/orange_hero_decor.svg'
 import dotted from '@/assets/images/dotted.png'
@@ -85,6 +85,7 @@ function HeroSection() {
           height={350}
           ref={heroImageRef}
           src={hero_image}
+          loading='eager'
           alt="hero image"
           className="relative z-[4] m-auto"
         />

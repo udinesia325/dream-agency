@@ -25,11 +25,13 @@ const WhatWeDoSlider = () => {
         <button onClick={() => swiperRef.current?.swiper.slidePrev()}>
           <CiCircleChevLeft
             className={`scale-150 text-3xl text-dark`}
+            aria-label='prev button'
           />
         </button>
         <button onClick={() => swiperRef.current?.swiper.slideNext()}>
           <CiCircleChevRight
             className={`scale-150 text-3xl text-dark`}
+            aria-label='next button'
           />
         </button>
       </div>

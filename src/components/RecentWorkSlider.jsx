@@ -70,7 +70,7 @@ const RecentWorkSlider = () => {
                 height={200}
                 style={{ backgroundColor: data.color }}
                 alt={data.title}
-                className="p-2 w-full aspect-video rounded-md"
+                className="p-2 w-full aspect-video object-cover rounded-md"
               />
               <div className="flex justify-between items-center">
                 <h1 className="my-2 text-lg text-dark font-bold uppercase">
