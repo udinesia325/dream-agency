@@ -7,13 +7,18 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
 import { RecentWorkData } from '@/data/slider'
 import Image from 'next/image'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import 'swiper/css'
 import 'swiper/css/virtual'
+import { animate, inView } from 'framer-motion'
 
 const RecentWorkSlider = () => {
   const swiperRef = useRef(null)
-
+  useEffect(() => {
+    inView(swiperRef.current, ({ target }) => {
+      animate(target, { scale: [0, 0, 0, 1] }, { delay: .5 })
+    })
+  }, [])
   return (
     <>
       <div className="w-[200px] mt-auto flex gap-4 justify-center">
@@ -71,7 +76,9 @@ const RecentWorkSlider = () => {
                 <h1 className="my-2 text-lg text-dark font-bold uppercase">
                   {data.title}
                 </h1>
-                <button className='text-dark text-sm tracking-wide border-2 border-dark rounded-full py-[5px] px-2'>View Work</button>
+                <button className="text-dark text-sm tracking-wide border-2 border-dark rounded-full py-[5px] px-2">
+                  View Work
+                </button>
               </div>
             </div>
           </SwiperSlide>

@@ -1,11 +1,10 @@
 'use client'
 import navItem, { navSocial } from '@/data/navItem'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import { Playfair_Display } from 'next/font/google'
-import { HiMenuAlt1, HiX } from 'react-icons/hi'
 import { motion } from 'framer-motion'
-import { useRouter, usePathname } from 'next/navigation'
+import { Playfair_Display } from 'next/font/google'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { HiMenuAlt1, HiX } from 'react-icons/hi'
 
 const playfair_Display = Playfair_Display({
   weight: ['400', '700'],
@@ -44,7 +43,7 @@ function Navbar() {
                 onClick={() => setActiveHash(nav.href)}
                 href={nav.href}
                 className={`text-dark text-sm ${
-                  activeHash == nav.href ? 'nav-active font-semibold' : ''
+                  activeHash == nav.href || !activeHash && index == 0 ? 'nav-active font-semibold' : ''
                 }`}
               >
                 {nav.title}
@@ -77,7 +76,7 @@ function Navbar() {
                 onClick={() => setActiveHash(nav.href)}
                 href={nav.href}
                 className={`text-dark text-sm ${
-                  activeHash == nav.href ? 'nav-active font-semibold' : ''
+                  activeHash == nav.href || !activeHash && index == 0 ? 'nav-active font-semibold' : ''
                 }`}
               >
                 {nav.title}

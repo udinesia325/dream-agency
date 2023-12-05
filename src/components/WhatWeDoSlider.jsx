@@ -7,13 +7,18 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
 import { WhatWeDoSliderData } from '@/data/slider'
 import Image from 'next/image'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import 'swiper/css'
 import 'swiper/css/virtual'
+import { animate, inView } from 'framer-motion'
 
 const WhatWeDoSlider = () => {
   const swiperRef = useRef(null)
-
+  useEffect(() => {
+    inView(swiperRef.current, ({ target }) => {
+      animate(target, { scale: [0, 0, 0, 1] }, { delay: .5 })
+    })
+  }, [])
   return (
     <div className="flex flex-col-reverse sm:flex-row gap-2 gap-y-5 mt-10">
       <div className="w-[200px] mt-auto flex gap-4 justify-center">
